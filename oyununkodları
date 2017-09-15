@@ -1,0 +1,93 @@
+from random import randint
+print ("\t\t\tEvilopers Number Puzzle")
+print ("v1.4 --- coded by Efe Şener")
+
+w = 1
+while w == 1:
+    zorluk = input("\n\nOyun zorluğunu yazınız(Kolay,Orta,Zor) : ")
+    #kolay
+    if zorluk == "Kolay" or zorluk == "kolay":
+        print ("\n\nAklımdan 1 ile 100 arasında bir sayı tuttum. 10 defada bilmeye çalış!")
+        print ("\n")
+        sayi = randint(0,100)
+        for a in range(1,11):
+            tahmin = int(input("Tahmininizi giriniz : "))
+            if tahmin > sayi :
+                print("--Daha düşük bir sayı giriniz")                 
+            elif tahmin < sayi :
+                print("--Daha yüksek bir sayı giriniz")
+            elif tahmin == sayi :
+                print ("\n")
+                print("Tebrikler doğru sayıyı ",a,". denemede bildiniz..!")
+                break
+        if a==1:
+            print ("\n")
+            print("Lan çok iyisin beee..! Zor modu seç sen..")
+        elif a>=2 and a<=4:
+            print ("\n")
+            print ("Bugün şanslı günündesin, helal..! Orta zorluktan devam edebilirsin.")
+        elif a>=5 and a<=9:
+            print ("\n")
+            print ("Eeeehh, iyisin iyi! Orta moda geç, buralarda harcanıyorsun!")
+        elif a==10:
+            print ("\n")
+            print ("Maalesef ",sayi," sayısını bilemedin. Bi' boku beceremiyorsun..! Merak etme sana yeni bir şans tanıyacağım. Lütfen tekrar kolay modu seç!")
+    #orta
+    elif zorluk == "Orta" or zorluk == "orta":
+        print ("\n\nAklımdan 1 ile 1000 arasında bir sayı tuttum. 10 defada bilmeye çalış!")
+        print ("\n")
+        ortasayi = randint(0,1000)
+        for ort in range(1,11):
+            ortatahmin = int(input("Tahmininizi giriniz : "))
+            if ortatahmin > ortasayi :
+               print("--Daha düşük bir sayı giriniz")
+            elif ortatahmin < ortasayi :
+                print("--Daha yüksek bir sayı giriniz")
+            elif ortatahmin == ortasayi :
+                print ("\n")
+                print("Tebrikler doğru sayıyı ",ort,". denemede bildiniz..!")
+                break
+        if ort==1:
+            print ("\n")
+            print("Mükkemmelsin..! Zor mod bile sana kolay gelir. Ama yine de bi' dene istersen..")
+        elif ort>=2 and ort<=4:
+            print ("\n")
+            print ("Çok iyisin lan helal be..! Zor moda geç sen buralarda harcanıyorsun..")
+        elif ort>=5 and ort<=9:
+            print ("\n")
+            print ("Şanslısın. Zor moddan davet var!")
+        elif ort==10:
+            print ("\n")
+            print ("Nice try bro! ",ortasayi," Sayısını bilemedin. Ama hemen pes etme sana yeni bir şans daha tanıyacağım..")
+    #zor
+    elif zorluk == "Zor" or zorluk == "zor":
+        print ("\n\nAklımdan 1 ile 1000 arasında bir sayı tuttum. 5 defada bilmeye çalış!")
+        print ("\n")
+        zorsayi = randint(0,1000)
+        for q in range (1,6):
+            zortahmin = int(input("Tahmininizi giriniz : "))
+            if zortahmin > zorsayi :
+                print("--Daha düşük bir sayı giriniz")
+            elif zortahmin < zorsayi :
+                print("--Daha yüksek bir sayı giriniz")
+            elif zortahmin == zorsayi :
+                print ("\n")
+                print("Tebrikler doğru sayıyı ",q,". denemede bildiniz..!")
+                break
+        if q==1:
+            print ("\n")
+            print("Sen varyaaaa, dünyanın en şanslı adamısın. Bi koşu piyango bileti kap gel..!")
+        elif q>=2 and q<=3:
+            print ("\n")
+            print ("Çok iyisin..!")
+        elif q==4:
+            print ("\n")
+            print ("Sen bayağı şanslısın yaa!")
+        elif q==5:
+            print ("\n")
+            print ("Cesaretin yeter bee..!",zorsayi," sayısını bilemedin. But never give up! Camon, one more time!")
+    #zorluk seçimi yanlış olursa:
+    elif zorluk != "Zor" or zorluk != "zor" or zorluk != "Orta" or zorluk != "orta" or zorluk != "Kolay" or zorluk != "kolay":
+        print("Böyle bir seviye tanımlanamadı. Lütfen (Kolay,Orta,Zor) seçeneklerinden birini seçin.")
+    #son
+
